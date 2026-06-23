@@ -120,6 +120,81 @@
   .reg-del{color:var(--red);border-color:rgba(226,35,26,.3)}
   .reg-del:active{background:var(--red);color:#fff}
 
+  /* TABS */
+  .tabs{display:flex;gap:6px;margin:14px 0 4px;background:var(--card2);border:1px solid var(--line);
+    border-radius:13px;padding:4px}
+  .tab{flex:1;border:none;background:none;border-radius:10px;padding:11px;cursor:pointer;
+    font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:.6px;text-transform:uppercase;
+    color:var(--muted)}
+  .tab.active{background:var(--card);color:var(--blue);box-shadow:0 2px 8px rgba(20,28,40,.1)}
+  .view[hidden]{display:none}
+
+  /* FILTROS */
+  .filters{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px}
+  .date-fields{display:flex;gap:10px}
+  .df{flex:1;display:flex;flex-direction:column;gap:5px;font-size:11px;letter-spacing:.6px;
+    text-transform:uppercase;color:var(--muted);font-weight:600}
+  .df input{border:1.5px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--white);
+    padding:10px;font-family:var(--body);font-size:14px;font-weight:600;outline:none}
+  .df input:focus{border-color:var(--blue)}
+  .quick-dates{display:flex;gap:7px;margin-top:11px;flex-wrap:wrap}
+  .qd{flex:1;min-width:64px;border:1px solid var(--line);background:var(--card2);color:var(--silver);
+    font-size:12px;font-weight:600;padding:8px 6px;border-radius:9px;cursor:pointer}
+  .qd.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+  .reg-toolbar{display:flex;gap:9px;margin-top:12px}
+  .r-toggle{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);
+    background:var(--card);color:var(--silver);font-family:var(--body);font-weight:600;font-size:13.5px;
+    padding:12px;border-radius:12px;cursor:pointer}
+  .r-toggle svg{width:18px;height:18px;color:var(--blue)}
+  .r-toggle.on{background:rgba(23,105,209,.1);border-color:var(--blue);color:var(--blue)}
+  .r-xls{flex:0 0 auto;display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#107c41,#0b5e31);
+    color:#fff;border:none;font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:.5px;
+    text-transform:uppercase;padding:12px 16px;border-radius:12px;cursor:pointer;box-shadow:0 5px 14px rgba(16,124,65,.26)}
+  .r-xls svg{width:20px;height:20px}
+  .r-xls:active{transform:translateY(1px)}
+  .r-xls[disabled]{opacity:.6}
+
+  .reg-summary{margin:14px 2px 8px;font-size:13px;color:var(--silver);font-weight:600;line-height:1.5}
+  .reg-summary b{color:var(--blue);font-family:var(--display);font-size:16px}
+  .reg-empty{text-align:center;color:var(--muted);font-size:13px;padding:28px 14px;
+    border:1.5px dashed var(--line);border-radius:14px}
+
+  /* TABLA */
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);
+    border-radius:14px;background:var(--card)}
+  .dtable{border-collapse:collapse;width:100%;min-width:520px;font-size:13px}
+  .dtable th{background:var(--bg2);color:var(--muted);font-family:var(--display);font-weight:600;
+    font-size:11px;letter-spacing:.7px;text-transform:uppercase;text-align:left;padding:11px 10px;
+    position:sticky;top:0;white-space:nowrap;border-bottom:1px solid var(--line)}
+  .dtable td{padding:10px;border-bottom:1px solid var(--line);color:var(--white);vertical-align:middle}
+  .dtable tr:last-child td{border-bottom:none}
+  .dtable td.c-clave{font-family:var(--display);font-weight:600;color:var(--gold);white-space:nowrap}
+  .dtable td.c-desc{color:var(--silver);font-size:12px;min-width:150px;max-width:200px}
+  .dtable td.c-num{text-align:center;font-family:var(--display);font-weight:600;white-space:nowrap}
+  .dtable td.c-tot{text-align:center;font-family:var(--display);font-weight:700;color:var(--red)}
+  .dtable td.c-date{color:var(--muted);font-size:11px;white-space:nowrap}
+  .dtable tfoot td{background:var(--bg2);font-family:var(--display);font-weight:700;
+    border-top:2px solid var(--line);border-bottom:none}
+  .ev-ico-btn{width:34px;height:34px;border-radius:8px;border:1px solid var(--line);background:var(--card2);
+    color:var(--blue);display:grid;place-items:center;cursor:pointer;margin:0 auto}
+  .ev-ico-btn svg{width:18px;height:18px}
+  .ev-ico-btn.none{color:var(--line);cursor:default}
+  .ev-ico-btn:not(.none):active{background:var(--blue);color:#fff}
+
+  .small-eb{margin-top:24px;font-size:11px}
+  .saved-list{display:flex;flex-direction:column;gap:9px}
+
+  /* LIGHTBOX */
+  .lightbox{position:fixed;inset:0;z-index:70;background:rgba(8,10,14,.92);display:none;
+    align-items:center;justify-content:center;padding:20px;
+    padding-top:calc(env(safe-area-inset-top,0) + 20px)}
+  .lightbox.show{display:flex}
+  .lightbox img{max-width:100%;max-height:100%;border-radius:12px;box-shadow:0 18px 50px rgba(0,0,0,.6)}
+  .lb-close{position:absolute;top:calc(env(safe-area-inset-top,0) + 14px);right:16px;width:40px;height:40px;
+    border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);color:#fff;
+    font-size:18px;cursor:pointer}
+
   /* SEARCH */
   .search-box{position:relative}
   .search-field{
@@ -442,6 +517,13 @@
     </div>
   </header>
 
+  <div class="tabs">
+    <button class="tab active" data-view="capture" id="tabCapture">Captura</button>
+    <button class="tab" data-view="registros" id="tabRegistros">Registros</button>
+  </div>
+
+  <div id="viewCapture" class="view">
+
   <div class="eyebrow"><span class="num">1</span> Buscar producto</div>
 
   <div class="search-box">
@@ -491,12 +573,6 @@
     <button class="reset" id="resetBtn">Vaciar</button>
   </div>
 
-  <div class="eyebrow" id="regEyebrow" style="display:none">
-    <span class="num db"><svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="6" rx="7" ry="3" stroke="#fff" stroke-width="2"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3" stroke="#fff" stroke-width="2"/></svg></span>
-    Registros guardados
-  </div>
-  <div class="reg-list" id="regList"></div>
-
   <div class="eyebrow" id="ciEyebrow" style="display:none"><span class="num">★</span> Check-ins en mapa</div>
   <div class="map-card" id="mapCard" style="display:none">
     <div class="map-stage">
@@ -506,7 +582,50 @@
     <div class="ci-list" id="ciList"></div>
   </div>
 
+  </div><!-- /viewCapture -->
+
+  <div id="viewRegistros" class="view" hidden>
+    <div class="eyebrow"><span class="num db"><svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="6" rx="7" ry="3" stroke="#fff" stroke-width="2"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3" stroke="#fff" stroke-width="2"/></svg></span> Consulta de registros</div>
+
+    <div class="filters">
+      <div class="date-fields">
+        <label class="df">Desde<input type="date" id="fDesde"></label>
+        <label class="df">Hasta<input type="date" id="fHasta"></label>
+      </div>
+      <div class="quick-dates">
+        <button class="qd" data-range="hoy">Hoy</button>
+        <button class="qd" data-range="semana">7 días</button>
+        <button class="qd" data-range="mes">30 días</button>
+        <button class="qd" data-range="todo">Todo</button>
+      </div>
+    </div>
+
+    <div class="reg-toolbar">
+      <button class="r-toggle" id="grpBtn" data-mode="detalle">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span id="grpLbl">Agrupar por artículo</span>
+      </button>
+      <button class="r-xls" id="xlsBtn">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M14 3v5h5M7 3h8l5 5v11a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9.5 12l2 3m0-3l-2 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        Excel
+      </button>
+    </div>
+
+    <div class="reg-summary" id="regSummary"></div>
+    <div class="table-wrap"><table class="dtable" id="regTable"></table></div>
+    <div class="reg-empty" id="regEmpty" style="display:none">No hay registros guardados en este rango de fechas.</div>
+
+    <div class="eyebrow small-eb">Conteos guardados</div>
+    <div class="saved-list" id="savedList"></div>
+  </div>
+
   <div class="foot">CEMENQUIN LOGÍSTICA · TRANSPORTE SEGURO Y CONFIABLE</div>
+</div>
+
+<!-- LIGHTBOX EVIDENCIA -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Cerrar">✕</button>
+  <img id="lbImg" src="" alt="evidencia">
 </div>
 
 <!-- MODAL CÁMARA / ESCÁNER -->
@@ -845,7 +964,7 @@ function updateTotals(){
   }
   $("grandTotal").textContent = fmt(grand);
   $("linesN").textContent = lines.length + (lines.length===1?" línea":" líneas");
-  totalBar.classList.toggle("show", lines.length>0);
+  totalBar.classList.toggle("show", (typeof currentView==="undefined" || currentView==="capture") && lines.length>0);
   persist();
 }
 
@@ -1027,28 +1146,199 @@ function saveRegistro(){
   DB.putReg(reg).then(()=>{ renderRegistros(); flash("Registro guardado ✓"); })
     .catch(()=>alert("No se pudo guardar el registro en este navegador."));
 }
-function renderRegistros(){
-  DB.allReg().then(regs=>{
-    regs=(regs||[]).sort((a,b)=>b.id-a.id);
-    $("regEyebrow").style.display = regs.length ? "flex":"none";
-    $("regList").innerHTML = regs.map(r=>{
-      const f=new Date(r.fecha).toLocaleString("es-MX",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
-      return '<div class="reg-item" data-id="'+r.id+'">'+
-        '<div class="reg-ico"><svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="6" rx="7" ry="3" stroke="currentColor" stroke-width="2"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3" stroke="currentColor" stroke-width="2"/></svg></div>'+
-        '<div class="reg-info"><div class="reg-name">'+esc(r.name)+'</div>'+
-          '<div class="reg-meta">'+f+' · <b>'+r.nlines+'</b> prod · <b>'+fmt(r.total)+'</b> pz</div></div>'+
-        '<div class="reg-btns"><button class="reg-load">Cargar</button><button class="reg-del">Borrar</button></div>'+
-      '</div>';
-    }).join("");
-    $("regList").querySelectorAll(".reg-item").forEach(it=>{
-      const id=+it.dataset.id;
-      it.querySelector(".reg-load").addEventListener("click",()=>loadRegistro(id));
-      it.querySelector(".reg-del").addEventListener("click",()=>{
-        if(confirm("¿Borrar este registro?")) DB.delReg(id).then(renderRegistros).catch(()=>{});
-      });
-    });
-  }).catch(()=>{});
+/* ---------- PESTAÑAS / VISTA REGISTROS ---------- */
+let currentView="capture", allRegs=[], regMode="detalle", currentRows=[];
+function switchView(name){
+  currentView=name;
+  document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active", t.dataset.view===name));
+  $("viewCapture").hidden = name!=="capture";
+  $("viewRegistros").hidden = name!=="registros";
+  totalBar.classList.toggle("show", name==="capture" && lines.length>0);
+  if(name==="registros") renderRegistros();
+  window.scrollTo({top:0,behavior:"auto"});
 }
+document.querySelectorAll(".tab").forEach(t=> t.addEventListener("click",()=>switchView(t.dataset.view)));
+
+function dDay(d){ const x=new Date(d);
+  return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0"); }
+function inDateRange(reg){
+  const desde=$("fDesde").value, hasta=$("fHasta").value, d=dDay(reg.fecha);
+  if(desde && d<desde) return false;
+  if(hasta && d>hasta) return false;
+  return true;
+}
+function getFilteredRegs(){ return allRegs.filter(inDateRange); }
+function flattenLines(regs){
+  const rows=[];
+  regs.forEach(r=>(r.lines||[]).forEach(l=>{
+    const total=(l.tarimas||0)*(l.pzTarima||0)+(l.camas||0)*(l.pzCama||0)+(l.piezas||0);
+    rows.push({fecha:r.fecha, regName:r.name, clave:l.clave, desc:l.desc,
+      tarimas:l.tarimas||0, camas:l.camas||0, piezas:l.piezas||0, total, evidence:l.evidence||null});
+  }));
+  return rows;
+}
+function groupByArticle(rows){
+  const m=new Map();
+  rows.forEach(r=>{ let g=m.get(r.clave);
+    if(!g){ g={clave:r.clave, desc:r.desc, tarimas:0,camas:0,piezas:0,total:0}; m.set(r.clave,g); }
+    g.tarimas+=r.tarimas; g.camas+=r.camas; g.piezas+=r.piezas; g.total+=r.total;
+  });
+  return [...m.values()].sort((a,b)=>b.total-a.total);
+}
+
+function renderRegistros(){
+  return DB.allReg().then(r=>{ allRegs=(r||[]).sort((a,b)=>b.id-a.id); renderSavedList(); renderTable(); })
+    .catch(()=>{ allRegs=[]; renderSavedList(); renderTable(); });
+}
+function renderTable(){
+  const regs=getFilteredRegs(), rows=flattenLines(regs);
+  currentRows=rows;
+  const tot=rows.reduce((a,r)=>a+r.total,0), articulos=new Set(rows.map(r=>r.clave)).size;
+  $("regSummary").innerHTML = regs.length
+    ? '<b>'+regs.length+'</b> conteo(s) · <b>'+articulos+'</b> artículo(s) · <b>'+fmt(tot)+'</b> piezas'
+    : "";
+  const table=$("regTable"), empty=$("regEmpty");
+  if(!rows.length){ table.innerHTML=""; empty.style.display="block"; return; }
+  empty.style.display="none";
+  if(regMode==="agrupado"){
+    const g=groupByArticle(rows);
+    table.innerHTML =
+      '<thead><tr><th>Clave</th><th>Descripción</th><th>Tar</th><th>Cam</th><th>Pz</th><th>Total pz</th></tr></thead><tbody>'+
+      g.map(x=>'<tr><td class="c-clave">'+esc(x.clave)+'</td><td class="c-desc">'+esc(x.desc)+'</td>'+
+        '<td class="c-num">'+fmt(x.tarimas)+'</td><td class="c-num">'+fmt(x.camas)+'</td>'+
+        '<td class="c-num">'+fmt(x.piezas)+'</td><td class="c-tot">'+fmt(x.total)+'</td></tr>').join("")+
+      '</tbody><tfoot><tr><td colspan="5">TOTAL</td><td class="c-tot">'+fmt(tot)+'</td></tr></tfoot>';
+  } else {
+    table.innerHTML =
+      '<thead><tr><th>Fecha</th><th>Clave</th><th>Descripción</th><th>Tar</th><th>Cam</th><th>Pz</th><th>Total</th><th>Ev.</th></tr></thead><tbody>'+
+      rows.map((r,i)=>{
+        const f=new Date(r.fecha).toLocaleDateString("es-MX",{day:"2-digit",month:"2-digit",year:"2-digit"});
+        const ev = r.evidence
+          ? '<button class="ev-ico-btn" data-row="'+i+'" aria-label="Ver evidencia"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="2"/><path d="M4 9a2 2 0 0 1 2-2h1l1-1.4A2 2 0 0 1 11 5h2a2 2 0 0 1 1.6.8L16 7h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></button>'
+          : '<span class="ev-ico-btn none">—</span>';
+        return '<tr><td class="c-date">'+f+'</td><td class="c-clave">'+esc(r.clave)+'</td>'+
+          '<td class="c-desc">'+esc(r.desc)+'</td><td class="c-num">'+fmt(r.tarimas)+'</td>'+
+          '<td class="c-num">'+fmt(r.camas)+'</td><td class="c-num">'+fmt(r.piezas)+'</td>'+
+          '<td class="c-tot">'+fmt(r.total)+'</td><td>'+ev+'</td></tr>';
+      }).join("")+
+      '</tbody><tfoot><tr><td colspan="6">TOTAL</td><td class="c-tot">'+fmt(tot)+'</td><td></td></tr></tfoot>';
+    table.querySelectorAll(".ev-ico-btn[data-row]").forEach(b=>{
+      b.addEventListener("click",()=>openLightbox(currentRows[+b.dataset.row].evidence));
+    });
+  }
+}
+function renderSavedList(){
+  const box=$("savedList");
+  if(!allRegs.length){ box.innerHTML='<div class="reg-empty" style="border:none;padding:14px">Aún no hay conteos guardados. Usa “Guardar registro” en la pestaña Captura.</div>'; return; }
+  box.innerHTML = allRegs.map(r=>{
+    const f=new Date(r.fecha).toLocaleString("es-MX",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+    return '<div class="reg-item" data-id="'+r.id+'">'+
+      '<div class="reg-ico"><svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="6" rx="7" ry="3" stroke="currentColor" stroke-width="2"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3" stroke="currentColor" stroke-width="2"/></svg></div>'+
+      '<div class="reg-info"><div class="reg-name">'+esc(r.name)+'</div>'+
+        '<div class="reg-meta">'+f+' · <b>'+r.nlines+'</b> prod · <b>'+fmt(r.total)+'</b> pz</div></div>'+
+      '<div class="reg-btns"><button class="reg-load">Cargar</button><button class="reg-del">Borrar</button></div>'+
+    '</div>';
+  }).join("");
+  box.querySelectorAll(".reg-item").forEach(it=>{
+    const id=+it.dataset.id;
+    it.querySelector(".reg-load").addEventListener("click",()=>loadRegistro(id));
+    it.querySelector(".reg-del").addEventListener("click",()=>{
+      if(confirm("¿Borrar este registro?")) DB.delReg(id).then(renderRegistros).catch(()=>{});
+    });
+  });
+}
+
+/* filtros de fecha */
+$("fDesde").addEventListener("change",()=>{ clearQuick(); renderTable(); });
+$("fHasta").addEventListener("change",()=>{ clearQuick(); renderTable(); });
+function clearQuick(){ document.querySelectorAll(".qd").forEach(x=>x.classList.remove("active")); }
+document.querySelectorAll(".qd").forEach(b=> b.addEventListener("click",()=>{
+  clearQuick(); b.classList.add("active");
+  const today=new Date(), to=dDay(today);
+  const minus=n=>{ const d=new Date(today); d.setDate(d.getDate()-n); return dDay(d); };
+  const r=b.dataset.range;
+  if(r==="hoy"){ $("fDesde").value=to; $("fHasta").value=to; }
+  else if(r==="semana"){ $("fDesde").value=minus(6); $("fHasta").value=to; }
+  else if(r==="mes"){ $("fDesde").value=minus(29); $("fHasta").value=to; }
+  else { $("fDesde").value=""; $("fHasta").value=""; }
+  renderTable();
+}));
+
+/* agrupar / detalle */
+$("grpBtn").addEventListener("click",()=>{
+  regMode = regMode==="detalle" ? "agrupado" : "detalle";
+  const on = regMode==="agrupado";
+  $("grpBtn").classList.toggle("on", on);
+  $("grpLbl").textContent = on ? "Ver detalle" : "Agrupar por artículo";
+  renderTable();
+});
+
+/* lightbox de evidencia */
+function openLightbox(src){ if(!src) return; $("lbImg").src=src; $("lightbox").classList.add("show"); }
+$("lbClose").addEventListener("click",()=>$("lightbox").classList.remove("show"));
+$("lightbox").addEventListener("click",e=>{ if(e.target.id==="lightbox") $("lightbox").classList.remove("show"); });
+
+/* exportar a Excel (con miniaturas de evidencia) */
+let exceljsP=null;
+function loadExcelJS(){
+  if(window.ExcelJS) return Promise.resolve();
+  if(exceljsP) return exceljsP;
+  exceljsP=new Promise((res,rej)=>{
+    const s=document.createElement("script");
+    s.src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js";
+    s.onload=()=>res(); s.onerror=()=>rej(new Error("No se pudo cargar la librería de Excel"));
+    document.head.appendChild(s);
+  });
+  return exceljsP;
+}
+async function exportExcel(){
+  const regs=getFilteredRegs(), rows=flattenLines(regs);
+  if(!rows.length){ alert("No hay datos para exportar en este rango."); return; }
+  const btn=$("xlsBtn"), orig=btn.innerHTML; btn.disabled=true; btn.textContent="Generando…";
+  try{
+    await loadExcelJS();
+    const wb=new ExcelJS.Workbook(); const ws=wb.addWorksheet("Registros");
+    const tot=rows.reduce((a,r)=>a+r.total,0);
+    if(regMode==="agrupado"){
+      ws.columns=[{header:"Clave",key:"clave",width:16},{header:"Descripción",key:"desc",width:40},
+        {header:"Tarimas",key:"tar",width:10},{header:"Camas",key:"cam",width:10},
+        {header:"Piezas",key:"pz",width:10},{header:"Total piezas",key:"tot",width:14}];
+      groupByArticle(rows).forEach(x=>ws.addRow({clave:x.clave,desc:x.desc,tar:x.tarimas,cam:x.camas,pz:x.piezas,tot:x.total}));
+      ws.addRow({}); const tr=ws.addRow({pz:"TOTAL",tot:tot}); tr.font={bold:true};
+    } else {
+      ws.columns=[{header:"Fecha",key:"fecha",width:12},{header:"Conteo",key:"reg",width:22},
+        {header:"Clave",key:"clave",width:16},{header:"Descripción",key:"desc",width:38},
+        {header:"Tarimas",key:"tar",width:9},{header:"Camas",key:"cam",width:9},
+        {header:"Piezas",key:"pz",width:9},{header:"Total",key:"tot",width:11},
+        {header:"Evidencia",key:"ev",width:13}];
+      rows.forEach(r=>{
+        const row=ws.addRow({fecha:new Date(r.fecha).toLocaleDateString("es-MX"),reg:r.regName,
+          clave:r.clave,desc:r.desc,tar:r.tarimas,cam:r.camas,pz:r.piezas,tot:r.total,ev:""});
+        if(r.evidence){
+          row.height=52;
+          try{
+            const imgId=wb.addImage({base64:r.evidence.split(",")[1], extension:"jpeg"});
+            ws.addImage(imgId,{tl:{col:8.12, row:row.number-1+0.08}, ext:{width:62,height:62}});
+          }catch(e){}
+        }
+      });
+      ws.addRow({}); const tr=ws.addRow({pz:"TOTAL",tot:tot}); tr.font={bold:true};
+    }
+    ws.getRow(1).font={bold:true};
+    ws.getRow(1).fill={type:"pattern",pattern:"solid",fgColor:{argb:"FFE2231A"}};
+    ws.getRow(1).font={bold:true,color:{argb:"FFFFFFFF"}};
+    const buf=await wb.xlsx.writeBuffer();
+    const blob=new Blob([buf],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});
+    const a=document.createElement("a"); a.href=URL.createObjectURL(blob);
+    a.download="registros_cemenquin_"+dDay(new Date())+".xlsx";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(a.href),5000);
+    flash("Excel generado ✓");
+  }catch(e){
+    alert("No se pudo exportar a Excel: "+((e&&e.message)||"error")+".\nLa primera vez requiere conexión a internet.");
+  }finally{ btn.disabled=false; btn.innerHTML=orig; }
+}
+$("xlsBtn").addEventListener("click", exportExcel);
 function loadRegistro(id){
   DB.allReg().then(regs=>{
     const r=(regs||[]).find(x=>x.id===id); if(!r) return;
@@ -1057,7 +1347,8 @@ function loadRegistro(id){
     checkins=(r.checkins||[]).map(c=>({...c, t:new Date(c.t)}));
     uid=r.uid || lines.reduce((m,l)=>Math.max(m,l.uid),0);
     render(); renderMap(); persist();
-    window.scrollTo({top:0,behavior:"smooth"});
+    switchView("capture");
+    flash("Conteo cargado");
   }).catch(()=>{});
 }
 function flash(msg){
